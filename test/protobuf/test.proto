@@ -1,0 +1,46 @@
+syntax = "proto3";// proto3 syntax
+package fixbug; // package name
+option cc_generic_services = true;
+message ResultCode
+{
+    int32 errcode = 1;
+    string errmsg = 2;
+}
+// login messeage definition
+message LoginRequest
+{
+    string name = 1;
+    string password = 2;
+}
+// login response message definition
+message LoginResponse
+{
+    ResultCode result = 1;
+    bool success = 3;
+}
+message GetFriendListRequest
+{
+    uint32 userid = 1;
+
+}
+message User
+{
+    bytes name = 1;
+    uint32 age = 2;
+    enum Sex
+    {
+        Man = 0;
+        WOMAN = 1;
+    }
+    Sex sex = 3;
+}
+message GetFriendResponse
+{
+    ResultCode result = 1;
+    repeated User friend_list = 2;
+}
+service UserServiceRpc
+{
+    rpc Login(LoginRequest) returns (LoginResponse);
+    rpc GetFriendList(GetFriendListRequest) returns (GetFriendResponse);
+}

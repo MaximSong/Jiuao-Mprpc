@@ -1,0 +1,2 @@
+/home/parallels/Desktop/mprpc/build/CMakeFiles/edit_cache.dir
+/home/parallels/Desktop/mprpc/build/CMakeFiles/rebuild_cache.dir
