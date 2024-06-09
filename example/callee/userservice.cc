@@ -32,6 +32,8 @@ public:
 };
 int main()
 {
-    UserService us;
-    us.Login("zhangsan", "123456");
+    MprpcApplication::Init(argc, argv);
+    RpcProvider provider;
+    provider.NotifyService(new UserService());
+    provider.Run();
 }
