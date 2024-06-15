@@ -759,7 +759,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "1"
+			"value" : "3"
 		},
 		{
 			"name" : "CMAKE_OBJCOPY",
@@ -839,7 +839,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "Project"
+			"value" : "mprpc"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1147,6 +1147,42 @@
 		},
 		{
 			"name" : "Project_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/home/parallels/Desktop/mprpc"
+		},
+		{
+			"name" : "mprpc_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/home/parallels/Desktop/mprpc/build"
+		},
+		{
+			"name" : "mprpc_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "ON"
+		},
+		{
+			"name" : "mprpc_SOURCE_DIR",
 			"properties" : 
 			[
 				{

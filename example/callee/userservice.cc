@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "../user.pb.h"
+#include "mprpcapplication.h"
 /*
 UserService provides local service, offering two functions: Login and GetFriend.
 */
@@ -30,9 +31,10 @@ public:
         done->Run();
     }
 };
-int main()
+int main(int argc, char **argv)
 {
     MprpcApplication::Init(argc, argv);
+    // 把UserService对象发布到RpcProvider
     RpcProvider provider;
     provider.NotifyService(new UserService());
     provider.Run();
