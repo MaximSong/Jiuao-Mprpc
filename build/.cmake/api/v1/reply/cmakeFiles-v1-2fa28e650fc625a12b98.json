@@ -126,6 +126,9 @@
 		},
 		{
 			"path" : "example/CMakeLists.txt"
+		},
+		{
+			"path" : "example/callee/CMakeLists.txt"
 		}
 	],
 	"kind" : "cmakeFiles",

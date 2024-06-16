@@ -28,10 +28,18 @@
 					},
 					"parentIndex" : 0,
 					"projectIndex" : 0,
-					"source" : "src"
+					"source" : "src",
+					"targetIndexes" : 
+					[
+						0
+					]
 				},
 				{
 					"build" : "example",
+					"childIndexes" : 
+					[
+						3
+					],
 					"jsonFile" : "directory-example-Debug-b6fca4a6d0a37c6ae6b9.json",
 					"minimumCMakeVersion" : 
 					{
@@ -40,6 +48,21 @@
 					"parentIndex" : 0,
 					"projectIndex" : 0,
 					"source" : "example"
+				},
+				{
+					"build" : "example/callee",
+					"jsonFile" : "directory-example.callee-Debug-1eaa0cd6ad8e395f31c5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "example/callee",
+					"targetIndexes" : 
+					[
+						1
+					]
 				}
 			],
 			"name" : "Debug",
@@ -50,12 +73,34 @@
 					[
 						0,
 						1,
-						2
+						2,
+						3
 					],
-					"name" : "mprpc"
+					"name" : "mprpc",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
 				}
 			],
-			"targets" : []
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "mprpc::@145eef247bfb46b6828c",
+					"jsonFile" : "target-mprpc-Debug-15869165e5e927386076.json",
+					"name" : "mprpc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "provider::@493cd8b262c97a98b12b",
+					"jsonFile" : "target-provider-Debug-992174b3f97968c349fb.json",
+					"name" : "provider",
+					"projectIndex" : 0
+				}
+			]
 		}
 	],
 	"kind" : "codemodel",

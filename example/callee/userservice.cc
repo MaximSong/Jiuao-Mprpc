@@ -2,6 +2,7 @@
 #include <string>
 #include "../user.pb.h"
 #include "mprpcapplication.h"
+#include "rpcprovider.h"
 /*
 UserService provides local service, offering two functions: Login and GetFriend.
 */
@@ -12,6 +13,7 @@ public:
     {
         std::cout << "doing local service: Login" << std::endl;
         std::cout << "name: " << name << std::endl;
+        return false;
     }
     // rewrite the virtual function to implement the service
     void Login(::google::protobuf::RpcController *controller,
@@ -27,7 +29,7 @@ public:
         fixbug::ResultCode *rc = response->mutable_result();
         rc->set_errcode(0);
         rc->set_errmsg("");
-        response->set_success(login_result);
+        response->set_success(std::to_string(login_result));
         done->Run();
     }
 };
@@ -38,4 +40,5 @@ int main(int argc, char **argv)
     RpcProvider provider;
     provider.NotifyService(new UserService());
     provider.Run();
+    return 0;
 }

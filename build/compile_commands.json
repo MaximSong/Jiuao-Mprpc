@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/home/parallels/Desktop/mprpc/build/src",
+  "command": "/usr/bin/aarch64-linux-gnu-g++ -Dmprpc_EXPORTS -I/home/parallels/Desktop/mprpc/src/include -I/home/parallels/Desktop/mprpc/example -g -fPIC -o CMakeFiles/mprpc.dir/mprpcapplication.cc.o -c /home/parallels/Desktop/mprpc/src/mprpcapplication.cc",
+  "file": "/home/parallels/Desktop/mprpc/src/mprpcapplication.cc"
+},
+{
+  "directory": "/home/parallels/Desktop/mprpc/build/src",
+  "command": "/usr/bin/aarch64-linux-gnu-g++ -Dmprpc_EXPORTS -I/home/parallels/Desktop/mprpc/src/include -I/home/parallels/Desktop/mprpc/example -g -fPIC -o CMakeFiles/mprpc.dir/rpcprovider.cc.o -c /home/parallels/Desktop/mprpc/src/rpcprovider.cc",
+  "file": "/home/parallels/Desktop/mprpc/src/rpcprovider.cc"
+},
+{
+  "directory": "/home/parallels/Desktop/mprpc/build/example/callee",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/parallels/Desktop/mprpc/src/include -I/home/parallels/Desktop/mprpc/example -g -o CMakeFiles/provider.dir/userservice.cc.o -c /home/parallels/Desktop/mprpc/example/callee/userservice.cc",
+  "file": "/home/parallels/Desktop/mprpc/example/callee/userservice.cc"
+},
+{
+  "directory": "/home/parallels/Desktop/mprpc/build/example/callee",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/parallels/Desktop/mprpc/src/include -I/home/parallels/Desktop/mprpc/example -g -o CMakeFiles/provider.dir/__/user.pb.cc.o -c /home/parallels/Desktop/mprpc/example/user.pb.cc",
+  "file": "/home/parallels/Desktop/mprpc/example/user.pb.cc"
+}
+]

@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/parallels/Desktop/mprpc/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/parallels/Desktop/mprpc/build/CMakeFiles /home/parallels/Desktop/mprpc/build/src//CMakeFiles/progress.marks
-	cd /home/parallels/Desktop/mprpc/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
+	cd /home/parallels/Desktop/mprpc/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/parallels/Desktop/mprpc/build/CMakeFiles /home/parallels/Desktop/mprpc/build/example/callee//CMakeFiles/progress.marks
+	cd /home/parallels/Desktop/mprpc/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example/callee/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/parallels/Desktop/mprpc/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/parallels/Desktop/mprpc/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
+	cd /home/parallels/Desktop/mprpc/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example/callee/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,12 +103,12 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/parallels/Desktop/mprpc/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/parallels/Desktop/mprpc/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example/callee/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/parallels/Desktop/mprpc/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/parallels/Desktop/mprpc/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example/callee/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
@@ -117,66 +117,66 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-src/CMakeFiles/mprpc.dir/rule:
-	cd /home/parallels/Desktop/mprpc/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/mprpc.dir/rule
-.PHONY : src/CMakeFiles/mprpc.dir/rule
+example/callee/CMakeFiles/provider.dir/rule:
+	cd /home/parallels/Desktop/mprpc/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example/callee/CMakeFiles/provider.dir/rule
+.PHONY : example/callee/CMakeFiles/provider.dir/rule
 
 # Convenience name for target.
-mprpc: src/CMakeFiles/mprpc.dir/rule
-.PHONY : mprpc
+provider: example/callee/CMakeFiles/provider.dir/rule
+.PHONY : provider
 
 # fast build rule for target.
-mprpc/fast:
-	cd /home/parallels/Desktop/mprpc/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/build
-.PHONY : mprpc/fast
+provider/fast:
+	cd /home/parallels/Desktop/mprpc/build && $(MAKE) $(MAKESILENT) -f example/callee/CMakeFiles/provider.dir/build.make example/callee/CMakeFiles/provider.dir/build
+.PHONY : provider/fast
 
-mprpcapplication.o: mprpcapplication.cc.o
-.PHONY : mprpcapplication.o
-
-# target to build an object file
-mprpcapplication.cc.o:
-	cd /home/parallels/Desktop/mprpc/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/mprpcapplication.cc.o
-.PHONY : mprpcapplication.cc.o
-
-mprpcapplication.i: mprpcapplication.cc.i
-.PHONY : mprpcapplication.i
-
-# target to preprocess a source file
-mprpcapplication.cc.i:
-	cd /home/parallels/Desktop/mprpc/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/mprpcapplication.cc.i
-.PHONY : mprpcapplication.cc.i
-
-mprpcapplication.s: mprpcapplication.cc.s
-.PHONY : mprpcapplication.s
-
-# target to generate assembly for a file
-mprpcapplication.cc.s:
-	cd /home/parallels/Desktop/mprpc/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/mprpcapplication.cc.s
-.PHONY : mprpcapplication.cc.s
-
-rpcprovider.o: rpcprovider.cc.o
-.PHONY : rpcprovider.o
+__/user.pb.o: __/user.pb.cc.o
+.PHONY : __/user.pb.o
 
 # target to build an object file
-rpcprovider.cc.o:
-	cd /home/parallels/Desktop/mprpc/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/rpcprovider.cc.o
-.PHONY : rpcprovider.cc.o
+__/user.pb.cc.o:
+	cd /home/parallels/Desktop/mprpc/build && $(MAKE) $(MAKESILENT) -f example/callee/CMakeFiles/provider.dir/build.make example/callee/CMakeFiles/provider.dir/__/user.pb.cc.o
+.PHONY : __/user.pb.cc.o
 
-rpcprovider.i: rpcprovider.cc.i
-.PHONY : rpcprovider.i
+__/user.pb.i: __/user.pb.cc.i
+.PHONY : __/user.pb.i
 
 # target to preprocess a source file
-rpcprovider.cc.i:
-	cd /home/parallels/Desktop/mprpc/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/rpcprovider.cc.i
-.PHONY : rpcprovider.cc.i
+__/user.pb.cc.i:
+	cd /home/parallels/Desktop/mprpc/build && $(MAKE) $(MAKESILENT) -f example/callee/CMakeFiles/provider.dir/build.make example/callee/CMakeFiles/provider.dir/__/user.pb.cc.i
+.PHONY : __/user.pb.cc.i
 
-rpcprovider.s: rpcprovider.cc.s
-.PHONY : rpcprovider.s
+__/user.pb.s: __/user.pb.cc.s
+.PHONY : __/user.pb.s
 
 # target to generate assembly for a file
-rpcprovider.cc.s:
-	cd /home/parallels/Desktop/mprpc/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/rpcprovider.cc.s
-.PHONY : rpcprovider.cc.s
+__/user.pb.cc.s:
+	cd /home/parallels/Desktop/mprpc/build && $(MAKE) $(MAKESILENT) -f example/callee/CMakeFiles/provider.dir/build.make example/callee/CMakeFiles/provider.dir/__/user.pb.cc.s
+.PHONY : __/user.pb.cc.s
+
+userservice.o: userservice.cc.o
+.PHONY : userservice.o
+
+# target to build an object file
+userservice.cc.o:
+	cd /home/parallels/Desktop/mprpc/build && $(MAKE) $(MAKESILENT) -f example/callee/CMakeFiles/provider.dir/build.make example/callee/CMakeFiles/provider.dir/userservice.cc.o
+.PHONY : userservice.cc.o
+
+userservice.i: userservice.cc.i
+.PHONY : userservice.i
+
+# target to preprocess a source file
+userservice.cc.i:
+	cd /home/parallels/Desktop/mprpc/build && $(MAKE) $(MAKESILENT) -f example/callee/CMakeFiles/provider.dir/build.make example/callee/CMakeFiles/provider.dir/userservice.cc.i
+.PHONY : userservice.cc.i
+
+userservice.s: userservice.cc.s
+.PHONY : userservice.s
+
+# target to generate assembly for a file
+userservice.cc.s:
+	cd /home/parallels/Desktop/mprpc/build && $(MAKE) $(MAKESILENT) -f example/callee/CMakeFiles/provider.dir/build.make example/callee/CMakeFiles/provider.dir/userservice.cc.s
+.PHONY : userservice.cc.s
 
 # Help Target
 help:
@@ -186,13 +186,13 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... mprpc"
-	@echo "... mprpcapplication.o"
-	@echo "... mprpcapplication.i"
-	@echo "... mprpcapplication.s"
-	@echo "... rpcprovider.o"
-	@echo "... rpcprovider.i"
-	@echo "... rpcprovider.s"
+	@echo "... provider"
+	@echo "... __/user.pb.o"
+	@echo "... __/user.pb.i"
+	@echo "... __/user.pb.s"
+	@echo "... userservice.o"
+	@echo "... userservice.i"
+	@echo "... userservice.s"
 .PHONY : help
 
 

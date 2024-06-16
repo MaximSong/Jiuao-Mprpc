@@ -4,11 +4,7 @@ class MprpcApplication
 {
 public:
     static void Init(int argc, char **argv);
-    static MprpcApplication &GetInstance()
-    {
-        static MprpcApplication app;
-        return app;
-    }
+    static MprpcApplication &GetInstance();
 
 private:
     MprpcApplication(){};
