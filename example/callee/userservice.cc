@@ -13,7 +13,7 @@ public:
     {
         std::cout << "doing local service: Login" << std::endl;
         std::cout << "name: " << name << std::endl;
-        return false;
+        return true;
     }
     // rewrite the virtual function to implement the service
     void Login(::google::protobuf::RpcController *controller,
@@ -29,7 +29,7 @@ public:
         fixbug::ResultCode *rc = response->mutable_result();
         rc->set_errcode(0);
         rc->set_errmsg("");
-        response->set_success(std::to_string(login_result));
+        response->set_success(login_result);
         done->Run();
     }
 };

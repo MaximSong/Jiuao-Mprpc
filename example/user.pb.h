@@ -519,23 +519,9 @@ class LoginResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSuccessFieldNumber = 2,
     kResultFieldNumber = 1,
+    kSuccessFieldNumber = 2,
   };
-  // bytes success = 2;
-  void clear_success();
-  const std::string& success() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_success(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_success();
-  PROTOBUF_NODISCARD std::string* release_success();
-  void set_allocated_success(std::string* success);
-  private:
-  const std::string& _internal_success() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_success(const std::string& value);
-  std::string* _internal_mutable_success();
-  public:
-
   // .fixbug.ResultCode result = 1;
   bool has_result() const;
   private:
@@ -554,6 +540,15 @@ class LoginResponse final :
       ::fixbug::ResultCode* result);
   ::fixbug::ResultCode* unsafe_arena_release_result();
 
+  // bool success = 2;
+  void clear_success();
+  bool success() const;
+  void set_success(bool value);
+  private:
+  bool _internal_success() const;
+  void _internal_set_success(bool value);
+  public:
+
   // @@protoc_insertion_point(class_scope:fixbug.LoginResponse)
  private:
   class _Internal;
@@ -562,8 +557,8 @@ class LoginResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr success_;
     ::fixbug::ResultCode* result_;
+    bool success_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -907,54 +902,24 @@ inline void LoginResponse::set_allocated_result(::fixbug::ResultCode* result) {
   // @@protoc_insertion_point(field_set_allocated:fixbug.LoginResponse.result)
 }
 
-// bytes success = 2;
+// bool success = 2;
 inline void LoginResponse::clear_success() {
-  _impl_.success_.ClearToEmpty();
+  _impl_.success_ = false;
 }
-inline const std::string& LoginResponse::success() const {
+inline bool LoginResponse::_internal_success() const {
+  return _impl_.success_;
+}
+inline bool LoginResponse::success() const {
   // @@protoc_insertion_point(field_get:fixbug.LoginResponse.success)
   return _internal_success();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void LoginResponse::set_success(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.success_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void LoginResponse::_internal_set_success(bool value) {
+  
+  _impl_.success_ = value;
+}
+inline void LoginResponse::set_success(bool value) {
+  _internal_set_success(value);
   // @@protoc_insertion_point(field_set:fixbug.LoginResponse.success)
-}
-inline std::string* LoginResponse::mutable_success() {
-  std::string* _s = _internal_mutable_success();
-  // @@protoc_insertion_point(field_mutable:fixbug.LoginResponse.success)
-  return _s;
-}
-inline const std::string& LoginResponse::_internal_success() const {
-  return _impl_.success_.Get();
-}
-inline void LoginResponse::_internal_set_success(const std::string& value) {
-  
-  _impl_.success_.Set(value, GetArenaForAllocation());
-}
-inline std::string* LoginResponse::_internal_mutable_success() {
-  
-  return _impl_.success_.Mutable(GetArenaForAllocation());
-}
-inline std::string* LoginResponse::release_success() {
-  // @@protoc_insertion_point(field_release:fixbug.LoginResponse.success)
-  return _impl_.success_.Release();
-}
-inline void LoginResponse::set_allocated_success(std::string* success) {
-  if (success != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.success_.SetAllocated(success, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.success_.IsDefault()) {
-    _impl_.success_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:fixbug.LoginResponse.success)
 }
 
 #ifdef __GNUC__

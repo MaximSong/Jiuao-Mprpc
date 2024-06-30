@@ -1,1 +1,2 @@
-/usr/bin/aarch64-linux-gnu-g++ -fPIC -g -shared -Wl,-soname,libmprpc.so -o ../../lib/libmprpc.so CMakeFiles/mprpc.dir/mprpcapplication.cc.o CMakeFiles/mprpc.dir/rpcprovider.cc.o   -L/home/parallels/Desktop/mprpc/lib 
+/usr/bin/aarch64-linux-gnu-ar qc ../../lib/libmprpc.a CMakeFiles/mprpc.dir/mprpcapplication.cc.o CMakeFiles/mprpc.dir/mprpcconfig.cc.o CMakeFiles/mprpc.dir/rpcheader.pb.cc.o CMakeFiles/mprpc.dir/rpcprovider.cc.o CMakeFiles/mprpc.dir/mprpcchannel.cc.o
+/usr/bin/aarch64-linux-gnu-ranlib ../../lib/libmprpc.a
