@@ -288,4 +288,13 @@ src/CMakeFiles/mprpc.dir/mprpcchannel.cc.o: \
  /usr/include/aarch64-linux-gnu/bits/unistd_ext.h \
  /usr/include/linux/close_range.h \
  /home/parallels/Desktop/mprpc/src/include/mprpcapplication.h \
- /home/parallels/Desktop/mprpc/src/include/mprpcconfig.h
+ /home/parallels/Desktop/mprpc/src/include/mprpcconfig.h \
+ /home/parallels/Desktop/mprpc/src/include/mprpccontroller.h \
+ /home/parallels/Desktop/mprpc/src/include/zookeeperutil.h \
+ /usr/include/semaphore.h /usr/include/aarch64-linux-gnu/bits/semaphore.h \
+ /usr/local/include/zookeeper/zookeeper.h \
+ /usr/include/aarch64-linux-gnu/sys/time.h \
+ /usr/local/include/zookeeper/proto.h \
+ /usr/local/include/zookeeper/zookeeper_version.h \
+ /usr/local/include/zookeeper/recordio.h \
+ /usr/local/include/zookeeper/zookeeper.jute.h

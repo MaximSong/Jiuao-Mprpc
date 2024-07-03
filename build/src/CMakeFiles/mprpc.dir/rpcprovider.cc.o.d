@@ -312,8 +312,17 @@ src/CMakeFiles/mprpc.dir/rpcprovider.cc.o: \
  /usr/local/protobuf/include/google/protobuf/port.h \
  /home/parallels/Desktop/mprpc/src/include/mprpcapplication.h \
  /home/parallels/Desktop/mprpc/src/include/mprpcconfig.h \
- /home/parallels/Desktop/mprpc/src/include/rpcheader.pb.h \
- /usr/local/protobuf/include/google/protobuf/io/coded_stream.h \
+ /home/parallels/Desktop/mprpc/src/include/mprpcchannel.h \
+ /usr/local/protobuf/include/google/protobuf/message.h \
+ /usr/local/protobuf/include/google/protobuf/stubs/casts.h \
+ /usr/local/protobuf/include/google/protobuf/arena.h \
+ /usr/local/protobuf/include/google/protobuf/arena_impl.h \
+ /usr/local/protobuf/include/google/protobuf/arenaz_sampler.h \
+ /usr/local/protobuf/include/google/protobuf/generated_message_reflection.h \
+ /usr/local/protobuf/include/google/protobuf/generated_enum_reflection.h \
+ /usr/local/protobuf/include/google/protobuf/stubs/strutil.h \
+ /usr/local/protobuf/include/google/protobuf/generated_enum_util.h \
+ /usr/local/protobuf/include/google/protobuf/message_lite.h \
  /usr/include/c++/11/climits \
  /usr/lib/gcc/aarch64-linux-gnu/11/include/limits.h \
  /usr/lib/gcc/aarch64-linux-gnu/11/include/syslimits.h \
@@ -323,34 +332,43 @@ src/CMakeFiles/mprpc.dir/rpcprovider.cc.o: \
  /usr/include/aarch64-linux-gnu/bits/posix2_lim.h \
  /usr/include/aarch64-linux-gnu/bits/xopen_lim.h \
  /usr/include/aarch64-linux-gnu/bits/uio_lim.h \
- /usr/local/protobuf/include/google/protobuf/stubs/strutil.h \
- /usr/local/protobuf/include/google/protobuf/arena.h \
- /usr/local/protobuf/include/google/protobuf/arena_impl.h \
- /usr/local/protobuf/include/google/protobuf/arenaz_sampler.h \
- /usr/local/protobuf/include/google/protobuf/arenastring.h \
+ /usr/local/protobuf/include/google/protobuf/io/coded_stream.h \
  /usr/local/protobuf/include/google/protobuf/explicitly_constructed.h \
- /usr/local/protobuf/include/google/protobuf/generated_message_util.h \
- /usr/local/protobuf/include/google/protobuf/any.h \
- /usr/local/protobuf/include/google/protobuf/message_lite.h \
  /usr/local/protobuf/include/google/protobuf/metadata_lite.h \
- /usr/local/protobuf/include/google/protobuf/has_bits.h \
- /usr/local/protobuf/include/google/protobuf/implicit_weak_message.h \
- /usr/local/protobuf/include/google/protobuf/repeated_field.h \
- /usr/local/protobuf/include/google/protobuf/repeated_ptr_field.h \
- /usr/local/protobuf/include/google/protobuf/wire_format_lite.h \
- /usr/local/protobuf/include/google/protobuf/stubs/casts.h \
- /usr/local/protobuf/include/google/protobuf/generated_message_reflection.h \
- /usr/local/protobuf/include/google/protobuf/generated_enum_reflection.h \
- /usr/local/protobuf/include/google/protobuf/generated_enum_util.h \
  /usr/local/protobuf/include/google/protobuf/unknown_field_set.h \
  /usr/local/protobuf/include/google/protobuf/io/zero_copy_stream_impl_lite.h \
  /usr/local/protobuf/include/google/protobuf/io/zero_copy_stream.h \
  /usr/local/protobuf/include/google/protobuf/stubs/stl_util.h \
  /usr/local/protobuf/include/google/protobuf/parse_context.h \
+ /usr/local/protobuf/include/google/protobuf/arenastring.h \
  /usr/local/protobuf/include/google/protobuf/endian.h \
+ /usr/local/protobuf/include/google/protobuf/implicit_weak_message.h \
+ /usr/local/protobuf/include/google/protobuf/repeated_field.h \
+ /usr/local/protobuf/include/google/protobuf/repeated_ptr_field.h \
  /usr/local/protobuf/include/google/protobuf/inlined_string_field.h \
- /usr/local/protobuf/include/google/protobuf/message.h \
+ /usr/local/protobuf/include/google/protobuf/wire_format_lite.h \
+ /usr/local/protobuf/include/google/protobuf/generated_message_util.h \
+ /usr/local/protobuf/include/google/protobuf/any.h \
+ /usr/local/protobuf/include/google/protobuf/has_bits.h \
  /usr/local/protobuf/include/google/protobuf/map.h \
  /usr/local/protobuf/include/google/protobuf/map_type_handler.h \
+ /home/parallels/Desktop/mprpc/src/include/mprpccontroller.h \
+ /home/parallels/Desktop/mprpc/src/include/rpcheader.pb.h \
  /usr/local/protobuf/include/google/protobuf/extension_set.h \
- /usr/include/c++/11/cassert
+ /usr/include/c++/11/cassert \
+ /home/parallels/Desktop/mprpc/src/include/logger.h \
+ /home/parallels/Desktop/mprpc/src/include/lockqueue.h \
+ /usr/include/c++/11/queue /usr/include/c++/11/deque \
+ /usr/include/c++/11/bits/stl_deque.h /usr/include/c++/11/bits/deque.tcc \
+ /usr/include/c++/11/bits/stl_queue.h /usr/include/c++/11/thread \
+ /usr/include/c++/11/bits/std_thread.h \
+ /usr/include/c++/11/bits/this_thread_sleep.h \
+ /usr/include/c++/11/condition_variable \
+ /home/parallels/Desktop/mprpc/src/include/zookeeperutil.h \
+ /usr/include/semaphore.h /usr/include/aarch64-linux-gnu/bits/semaphore.h \
+ /usr/local/include/zookeeper/zookeeper.h \
+ /usr/include/aarch64-linux-gnu/sys/time.h \
+ /usr/local/include/zookeeper/proto.h \
+ /usr/local/include/zookeeper/zookeeper_version.h \
+ /usr/local/include/zookeeper/recordio.h \
+ /usr/local/include/zookeeper/zookeeper.jute.h

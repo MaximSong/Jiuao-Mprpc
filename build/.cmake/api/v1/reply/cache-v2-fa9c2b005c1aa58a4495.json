@@ -1155,7 +1155,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "general;muduo_net;general;muduo_base;general;pthread;"
+			"value" : "general;zookeeper_mt;general;muduo_net;general;muduo_base;general;pthread;"
 		},
 		{
 			"name" : "mprpc_SOURCE_DIR",

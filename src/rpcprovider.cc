@@ -1,6 +1,8 @@
 #include "rpcprovider.h"
 #include "mprpcapplication.h"
 #include "rpcheader.pb.h"
+#include "logger.h"
+#include "zookeeperutil.h"
 /*
     service_name => service描述对象
 */
@@ -12,14 +14,16 @@ void RpcProvider::NotifyService(google::protobuf::Service *service)
     std::string serviceName = pserviceDesc->name();
     // 获取服务的方法的数量
     int methodCnt = pserviceDesc->method_count();
-    std::cout << "service name:" << serviceName << " method cnt:" << methodCnt << std::endl;
+    // std::cout << "service name:" << serviceName << " method cnt:" << methodCnt << std::endl;
+    M_RPC_LOG_INFO("service name:%s", serviceName.c_str());
     for (int i = 0; i < methodCnt; i++)
     {
         // 获取服务的方法的描述
         const google::protobuf::MethodDescriptor *pmethodDesc = pserviceDesc->method(i);
         std::string method_name = pmethodDesc->name();
         serviceInfo.m_methodMap.insert({method_name, pmethodDesc});
-        std::cout << "method name:" << method_name << std::endl;
+        // std::cout << "method name:" << method_name << std::endl;
+        M_RPC_LOG_INFO("method name:%s", method_name.c_str());
     }
     serviceInfo.m_service = service;
     m_serviceMap.insert({serviceName, serviceInfo});
@@ -36,6 +40,21 @@ void RpcProvider::Run()
     server.setMessageCallback(std::bind(&RpcProvider::OnMessage, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3));
     server.setThreadNum(4); // 设置muduo库的线程数量
     std::cout << "service start ip:" << ip << " port:" << port << std::endl;
+    ZkClient ZkCli;
+    ZkCli.Start();
+    for (auto &sp : m_serviceMap)
+    {
+        std::string servicePath = "/" + sp.first;
+        ZkCli.Create(servicePath.c_str(), nullptr, 0, 0);
+        for (auto &mp : sp.second.m_methodMap)
+        {
+            std::string methodPath = servicePath + "/" + mp.first;
+            char method_path_data[128] = {0};
+            sprintf(method_path_data, "%s:%d", ip.c_str(), port);
+            // 服务方法都是临时节点
+            ZkCli.Create(methodPath.c_str(), method_path_data, strlen(method_path_data), ZOO_EPHEMERAL);
+        }
+    }
     server.start();
     m_eventLoop.loop();
     // 设置muduo库的线程数量

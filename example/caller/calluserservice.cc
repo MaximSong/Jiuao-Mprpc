@@ -21,5 +21,20 @@ int main(int argc, char **argv)
     {
         std::cout << "rpc login response error:" << response.result().errmsg() << std::endl;
     }
+    // 调用远程Register服务
+    fixbug::RegisterRequest req;
+    fixbug::RegisterResponse rsp;
+    req.set_id(2000);
+    req.set_username("mprpc");
+    req.set_password("123456");
+    stub.Register(nullptr, &req, &rsp, nullptr);
+    if (rsp.result().errcode() == 0)
+    {
+        std::cout << "rpc register response success:" << rsp.success() << std::endl;
+    }
+    else
+    {
+        std::cout << "rpc register response error:" << rsp.result().errmsg() << std::endl;
+    }
     return 0;
 }

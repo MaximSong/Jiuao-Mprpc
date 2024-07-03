@@ -25,23 +25,38 @@
   "file": "/home/parallels/Desktop/mprpc/src/mprpcchannel.cc"
 },
 {
-  "directory": "/home/parallels/Desktop/mprpc/build/example/callee",
-  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/parallels/Desktop/mprpc/src/include -I/home/parallels/Desktop/mprpc/example -g -o CMakeFiles/provider.dir/userservice.cc.o -c /home/parallels/Desktop/mprpc/example/callee/userservice.cc",
-  "file": "/home/parallels/Desktop/mprpc/example/callee/userservice.cc"
+  "directory": "/home/parallels/Desktop/mprpc/build/src",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/parallels/Desktop/mprpc/src/include -I/home/parallels/Desktop/mprpc/example -g -o CMakeFiles/mprpc.dir/mprpccontroller.cc.o -c /home/parallels/Desktop/mprpc/src/mprpccontroller.cc",
+  "file": "/home/parallels/Desktop/mprpc/src/mprpccontroller.cc"
+},
+{
+  "directory": "/home/parallels/Desktop/mprpc/build/src",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/parallels/Desktop/mprpc/src/include -I/home/parallels/Desktop/mprpc/example -g -o CMakeFiles/mprpc.dir/logger.cc.o -c /home/parallels/Desktop/mprpc/src/logger.cc",
+  "file": "/home/parallels/Desktop/mprpc/src/logger.cc"
+},
+{
+  "directory": "/home/parallels/Desktop/mprpc/build/src",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/parallels/Desktop/mprpc/src/include -I/home/parallels/Desktop/mprpc/example -g -o CMakeFiles/mprpc.dir/zookeeperutil.cc.o -c /home/parallels/Desktop/mprpc/src/zookeeperutil.cc",
+  "file": "/home/parallels/Desktop/mprpc/src/zookeeperutil.cc"
 },
 {
   "directory": "/home/parallels/Desktop/mprpc/build/example/callee",
-  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/parallels/Desktop/mprpc/src/include -I/home/parallels/Desktop/mprpc/example -g -o CMakeFiles/provider.dir/__/user.pb.cc.o -c /home/parallels/Desktop/mprpc/example/user.pb.cc",
-  "file": "/home/parallels/Desktop/mprpc/example/user.pb.cc"
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/parallels/Desktop/mprpc/src/include -I/home/parallels/Desktop/mprpc/example -g -o CMakeFiles/provider.dir/friendservice.cc.o -c /home/parallels/Desktop/mprpc/example/callee/friendservice.cc",
+  "file": "/home/parallels/Desktop/mprpc/example/callee/friendservice.cc"
+},
+{
+  "directory": "/home/parallels/Desktop/mprpc/build/example/callee",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/parallels/Desktop/mprpc/src/include -I/home/parallels/Desktop/mprpc/example -g -o CMakeFiles/provider.dir/__/friend.pb.cc.o -c /home/parallels/Desktop/mprpc/example/friend.pb.cc",
+  "file": "/home/parallels/Desktop/mprpc/example/friend.pb.cc"
 },
 {
   "directory": "/home/parallels/Desktop/mprpc/build/example/caller",
-  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/parallels/Desktop/mprpc/src/include -I/home/parallels/Desktop/mprpc/example -g -o CMakeFiles/consumer.dir/calluserservice.cc.o -c /home/parallels/Desktop/mprpc/example/caller/calluserservice.cc",
-  "file": "/home/parallels/Desktop/mprpc/example/caller/calluserservice.cc"
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/parallels/Desktop/mprpc/src/include -I/home/parallels/Desktop/mprpc/example -g -o CMakeFiles/consumer.dir/callfriendservice.cc.o -c /home/parallels/Desktop/mprpc/example/caller/callfriendservice.cc",
+  "file": "/home/parallels/Desktop/mprpc/example/caller/callfriendservice.cc"
 },
 {
   "directory": "/home/parallels/Desktop/mprpc/build/example/caller",
-  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/parallels/Desktop/mprpc/src/include -I/home/parallels/Desktop/mprpc/example -g -o CMakeFiles/consumer.dir/__/user.pb.cc.o -c /home/parallels/Desktop/mprpc/example/user.pb.cc",
-  "file": "/home/parallels/Desktop/mprpc/example/user.pb.cc"
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/parallels/Desktop/mprpc/src/include -I/home/parallels/Desktop/mprpc/example -g -o CMakeFiles/consumer.dir/__/friend.pb.cc.o -c /home/parallels/Desktop/mprpc/example/friend.pb.cc",
+  "file": "/home/parallels/Desktop/mprpc/example/friend.pb.cc"
 }
 ]
