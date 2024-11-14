@@ -1,34 +1,33 @@
-# Mprpc 分布式网络通信框架
+# Mprpc Distributed Network Communication Framework
 
-## 项目概述
+## Project Overview
 
-Mprpc 是一个高效的分布式网络通信框架，利用多种先进技术实现高性能和高可靠性。项目的主要特性包括使用 muduo 网络库进行高效的 I/O 处理、利用 Protobuf 进行 RPC 参数的序列化和反序列化、实现异步日志模块，以及采用 Zookeeper 作为分布式配置中心。
+Mprpc is a high-performance distributed network communication framework that leverages various advanced technologies to achieve high efficiency and reliability. The main features of the project include efficient I/O processing using the muduo network library, RPC parameter serialization and deserialization with Protobuf, an asynchronous logging module, and using Zookeeper as a distributed configuration center.
 
-## 项目地址
+## Project Repository
 
 [GitHub Repository](https://github.com/MaximSong/Jiuao-Mprpc)
 
-## 主要功能及原理
+## Key Features and Principles
 
-- **高效 I/O 处理**：使用 muduo 网络库，通过 TcpServer 管理连接，绑定回调方法，实现高效的 I/O 处理和事件循环机制，提升网络通信性能。
-- **RPC 参数序列化与反序列化**：利用 Protobuf 进行 RPC 参数的序列化和反序列化，确保数据传输的高效性和兼容性，简化跨语言通信。
-- **异步日志模块**：实现异步日志模块，采用单例模式和独立线程将日志按日期写入磁盘，减少 I/O 开销，提升框架整体性能。
-- **分布式配置中心**：采用 Zookeeper 作为分布式配置中心，通过注册和发现服务节点，确保客户端能够正确定位到服务实例，提高系统的可扩展性和稳定性。
+- **Efficient I/O Processing**: Utilizes the muduo network library, managing connections via TcpServer and binding callback methods to implement efficient I/O processing and event loop mechanisms, enhancing network communication performance.
+- **RPC Parameter Serialization and Deserialization**: Uses Protobuf for RPC parameter serialization and deserialization, ensuring efficient and compatible data transmission, simplifying cross-language communication.
+- **Asynchronous Logging Module**: Implements an asynchronous logging module with a singleton pattern and dedicated threads to write logs to disk by date, reducing I/O overhead and improving overall framework performance.
+- **Distributed Configuration Center**: Uses Zookeeper as a distributed configuration center for service node registration and discovery, ensuring that clients can correctly locate service instances and enhancing system scalability and stability.
 
-## 编译与运行
-### 项目配置
+## Compilation and Execution
+### Project Configuration
 
-在 `bin` 目录下定义 `conf` 文件，包括以下内容：
+Define the `conf` file in the `bin` directory with the following parameters:
 
 - `rpcserverip`
 - `rpcserverport`
 - `zookeeperip`
 - `zookeeperport`
 
+### Compiling the Project
 
-### 编译项目
-
-项目提供了自动化编译脚本 `autobuild.sh`。你可以使用以下命令编译项目：
+The project provides an automated build script, `autobuild.sh`. You can compile the project using the following command:
 
 ```bash
 ./autobuild.sh
